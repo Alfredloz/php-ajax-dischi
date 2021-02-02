@@ -10,10 +10,7 @@ Attraverso un’altra chiamata ajax, filtrare gli album per artista
 Lo screenshot si trova nelle slide. -->
 
 <!-- php -->
-<?php 
-include __DIR__ . '/partials/data.php';
-// var_dump($albums);
-?>
+
 <!-- /php -->
 
 
@@ -25,30 +22,30 @@ include __DIR__ . '/partials/data.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav></nav>
-  <div class="app">
-  <?php 
-    foreach ($albums as $album) { ?>
-      <div class="card">
-        <img src="<?php echo $album['poster']; ?>" alt="">
-        <div class="info">
-        <h2><?php echo $album['title']; ?></h2>
-        <p><?php echo $album['author']; ?></p>
-        <p><?php echo $album['year']; ?></p>
+  <div id="app">
+    <?php 
+      foreach ($albums as $album) { ?>
+        <div class="card">
+          <img src="<?php echo $album['poster']; ?>" alt="">
+          <div class="info">
+          <h2><?php echo $album['title']; ?></h2>
+          <p><?php echo $album['author']; ?></p>
+          <p><?php echo $album['year']; ?></p>
+          <!-- <p v-for="album in albumArray">{{album.genre}}</p> -->
         </div>
-      </div>
-   <?php }
-  ?>
-
-
+    <?php }
+    ?>
   </div>
 
 
 
   <!-- js and frameworks -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
-  <script src="./dist/js/app.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" ></script>
+  <script src="./dist/js/app.js" charset="utf-8"></script>
 </body>
 </html>

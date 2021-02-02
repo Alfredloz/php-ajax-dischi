@@ -7,7 +7,33 @@
   \***********************/
 /***/ (() => {
 
-// console.log("Ciao!");
+// alert('ciao');
+var app = new Vue({
+  el: '#app',
+  data: {
+    albumArray: []
+  },
+  methods: {},
+  mounted: function mounted() {
+    var _this = this;
+
+    var config = {
+      method: 'get',
+      url: 'dist/php/json-data.php',
+      headers: {}
+    };
+    axios(config).then(function (response) {
+      _this.albumArray = response.data;
+      console.log(_this.albumArray);
+      console.log(response);
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  }
+}); // axios.get('json-data.php')
+// .then(response =>{
+//     console.log(response);
+// })
 
 /***/ }),
 
