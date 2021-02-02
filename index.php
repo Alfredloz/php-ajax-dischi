@@ -82,7 +82,7 @@ $albums= [
     "year" => "1987"
   ],
 ];
-var_dump($albums);
+// var_dump($albums);
 ?>
 <!-- /php -->
 
@@ -97,7 +97,24 @@ var_dump($albums);
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello world</h1>
+  <div class="app">
+  <?php 
+    foreach ($albums as $album) { ?>
+      <img src="<?php echo $album['poster']; ?>" alt="">
+      <h2><?php echo $album['title']; ?></h2>
+      <p><?php echo $album['author']; ?></p>
+      <p><?php echo $album['genre']; ?></p>
+      <p><?php echo $album['year']; ?></p>
+
+
+   <?php }
+  ?>
+
+
+  </div>
+
+
+
   <!-- js and frameworks -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
   <script src="./dist/js/app.js"></script>
