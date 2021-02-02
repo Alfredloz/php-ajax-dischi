@@ -77,7 +77,7 @@ $albums= [
   [
     "poster" => "https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg",
     "title" => "Bad",
-    "author" => "Michael Jacjson",
+    "author" => "Michael Jackjson",
     "genre" => "Pop",
     "year" => "1987"
   ],
@@ -97,16 +97,17 @@ $albums= [
   <title>Document</title>
 </head>
 <body>
+  <nav></nav>
   <div class="app">
   <?php 
     foreach ($albums as $album) { ?>
-      <img src="<?php echo $album['poster']; ?>" alt="">
-      <h2><?php echo $album['title']; ?></h2>
-      <p><?php echo $album['author']; ?></p>
-      <p><?php echo $album['genre']; ?></p>
-      <p><?php echo $album['year']; ?></p>
-
-
+      <div class="card">
+        <img src="<?php echo $album['poster']; ?>" alt="">
+        <h2><?php echo $album['title']; ?></h2>
+        <p><?php echo $album['author']; ?></p>
+        <p><?php echo $album['genre']; ?></p>
+        <p><?php echo $album['year']; ?></p>
+      </div>
    <?php }
   ?>
 
