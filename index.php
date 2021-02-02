@@ -27,18 +27,10 @@ Lo screenshot si trova nelle slide. -->
 <body>
   <nav></nav>
   <div id="app">
-    <?php 
-      foreach ($albums as $album) { ?>
-        <div class="card">
-          <img src="<?php echo $album['poster']; ?>" alt="">
-          <div class="info">
-          <h2><?php echo $album['title']; ?></h2>
-          <p><?php echo $album['author']; ?></p>
-          <p><?php echo $album['year']; ?></p>
-          <!-- <p v-for="album in albumArray">{{album.genre}}</p> -->
-        </div>
-    <?php }
-    ?>
+    <div class="card" v-for="album in albumArray">
+      <img :src="album.poster" alt="">
+      <p>{{album.title}}</p>
+    </div>
   </div>
 
 
