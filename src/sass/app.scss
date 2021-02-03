@@ -24,6 +24,7 @@ nav {
     height: 25rem;
     padding: 0.5rem;
     background: rgb(46, 58, 70);
+    box-shadow: -1px -4px 44px -4px rgb(108, 108, 104);
     color: white;
     text-align: center;
      img{
@@ -34,7 +35,7 @@ nav {
        padding: 1rem;
        line-height: 1.5rem;
        p {
-        //  padding: 1rem;
+        //  padding: 0.3rem;
           color: grey;
        }
      }

@@ -10,9 +10,7 @@ Attraverso un’altra chiamata ajax, filtrare gli album per artista
 Lo screenshot si trova nelle slide. -->
 
 <!-- php -->
-<?php 
-include __DIR__ . '/partials/data.php';
-?>
+
 <!-- /php -->
 
 
@@ -29,20 +27,14 @@ include __DIR__ . '/partials/data.php';
 <body>
   <nav></nav>
   <div id="app">
-    <!-- for each nel file data.php -->
-    <?php 
-    foreach ($albums as $album) { ?>
-      <div class="card">
-        <img src="<?php echo $album['poster']; ?>" alt="">
-        <div class="info">
-        <h2><?php echo $album['title']; ?></h2>
-        <p><?php echo $album['author']; ?></p>
-        <p><?php echo $album['genre']; ?></p>
-        <p><?php echo $album['year']; ?></p>
-        </div>
+    <div class="card" v-for="album in albumArray">
+      <img :src="album.poster" alt="">
+      <div class="info">
+      <h3>{{album.title}}</h3>
+      <p>{{album.author}}</p>
+      <p>{{album.year}}</p>
       </div>
-  <?php  }
-    ?>
+    </div>
   </div>
 
 

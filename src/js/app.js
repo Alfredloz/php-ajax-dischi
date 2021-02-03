@@ -10,7 +10,7 @@ let app = new Vue({
     mounted(){
         var config ={
             method: 'get',
-            url:'dist/php/json-data.php',
+            url:'partials/json-data.php',
             headers:{
 
             }
@@ -24,7 +24,8 @@ let app = new Vue({
 			console.log(error);
         })
     }
-})
+});
+console.log('ciao');
 // axios.get('json-data.php')
 // .then(response =>{
 //     console.log(response);

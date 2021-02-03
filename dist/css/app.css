@@ -26,6 +26,7 @@ nav {
   height: 25rem;
   padding: 0.5rem;
   background: #2e3a46;
+  box-shadow: -1px -4px 44px -4px #6c6c68;
   color: white;
   text-align: center;
 }
